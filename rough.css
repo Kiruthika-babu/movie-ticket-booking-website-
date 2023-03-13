@@ -1,0 +1,121 @@
+
+* {
+  box-sizing: content-box;
+}
+
+body {
+ 
+  background: rgb(233, 107, 10);
+  background-image: linear-gradient(90deg, rgb(246, 223, 11) 0%, rgba(205,212,226,0) 100%), url('aiml2.jpg');
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 0px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #eeeef6;
+  height: 12px;
+  width: 25px;
+  margin: 3px;
+  border-width: 500px;
+  border-color: antiquewhite;
+  border-top-left-radius: 90deg;
+  border-top-right-radius: 90deg;
+  
+  transition-property: inherit(-40deg);
+}
+
+.seat.selected {
+  background-color: #16ea24;
+}
+
+.seat.occupied {
+  background-color: rgba(255, 255, 255, 0.523);
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background:rgba(98, 57, 22, 0.512);
+  padding: 5px 10px;
+  border-radius: 1000px;
+  color: rgb(252, 248, 248);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 200px;
+  width: 600px;
+  margin: 30px ;
+ 
+  transform: rotate3d(-35deg)
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #73f66f;
+}
